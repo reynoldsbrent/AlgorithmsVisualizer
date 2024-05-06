@@ -29,7 +29,20 @@ namespace AlgorithmsVisualizer
         }
         public static void BubbleSort(List<int> numbers)
         {
+            int listLength = numbers.Count;
 
+            for (int i = 0; i < listLength - 1; i++)
+            {
+                for (int j = 0; j < listLength - i - 1; j++)
+                {
+                    if (numbers[j] > numbers[j + 1])
+                    {
+                        int temp = numbers[j];
+                        numbers[j] = numbers[j + 1];
+                        numbers[j + 1] = temp;
+                    }
+                }
+            }
         }
         public static void InsertionSort(List<int> numbers)
         {
