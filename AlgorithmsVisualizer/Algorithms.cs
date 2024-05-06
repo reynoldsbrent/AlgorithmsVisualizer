@@ -46,7 +46,27 @@ namespace AlgorithmsVisualizer
         }
         public static void InsertionSort(List<int> numbers)
         {
+            int listLength = numbers.Count;
 
+            for (int i = 1; i < listLength; i++)
+            {
+                int key = numbers[i];
+                int flag = 0;
+
+                for (int j = i - 1; j >= 0; j--)
+                {
+                    if (key < numbers[j])
+                    {
+                        numbers[j + 1] = numbers[j];
+                    }
+                    else
+                    {
+                        numbers[j + 1] = key;
+                        flag = 1;
+                        break;
+                    }
+                }   
+            }   
         }
         public static void MergeSort(List<int> numbers)
         {
