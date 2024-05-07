@@ -11,9 +11,10 @@ The following algorithms are implemented:
 1. Counting Sort
 1. Bucket Sort
 ## References
-- [Bubble Sort] - `https://code-maze.com/csharp-bubble-sort/`
-- [Selection Sort] - `https://code-maze.com/csharp-selection-sort/`
-- [Insertion Sort] - `https://code-maze.com/insertion-sort-csharp/`
+- [Bubble Sort](https://code-maze.com/csharp-bubble-sort/)
+- [Selection Sort](https://code-maze.com/csharp-selection-sort/)
+- [Insertion Sort](https://code-maze.com/insertion-sort-csharp/)
+- [Merge Sort](https://tutorials.eu/merge-sort-in-c/)
 
 ## Author
-Brent Reynolds - `https://github.com/reynoldsbrent`
+[Brent Reynolds](https://github.com/reynoldsbrent)
