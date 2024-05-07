@@ -45,8 +45,9 @@
                         Console.WriteLine("Sorted list: " + numberList);
                         break;
                     case "4":
-                        Algorithms.MergeSort(numbers);
-                        numberList = Algorithms.ListToString(numbers);
+                        int[] numArray = numbers.ToArray();
+                        Algorithms.MergeSort(numArray);
+                        numberList = Algorithms.ArrayToString(numArray);
                         Console.WriteLine("Sorted list: " + numberList);
                         break;
                     case "5":
