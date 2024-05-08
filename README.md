@@ -15,6 +15,7 @@ The following algorithms are implemented:
 - [Selection Sort](https://code-maze.com/csharp-selection-sort/)
 - [Insertion Sort](https://code-maze.com/insertion-sort-csharp/)
 - [Merge Sort](https://tutorials.eu/merge-sort-in-c/)
+- [Quick Sort](https://code-maze.com/csharp-quicksort-algorithm/)
 
 ## Author
 [Brent Reynolds](https://github.com/reynoldsbrent)
