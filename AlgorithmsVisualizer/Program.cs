@@ -51,7 +51,7 @@
                         Console.WriteLine("Sorted list: " + numberList);
                         break;
                     case "5":
-                        Algorithms.QuickSort(numbers);
+                        Algorithms.QuickSort(numbers, 0, numbers.Count - 1);
                         numberList = Algorithms.ListToString(numbers);
                         Console.WriteLine("Sorted list: " + numberList);
                         break;

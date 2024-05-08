@@ -108,9 +108,42 @@ namespace AlgorithmsVisualizer
             while (j < right.Length)
                 arr[k++] = right[j++];
         }
-        public static void QuickSort(List<int> numbers)
+        public static void QuickSort(List<int> numbers, int leftIndex, int rightIndex)
         {
+            int i = 0;
+            int j = numbers.Count - 1;
+            int pivot = numbers[leftIndex];
 
+            while (i <= j)
+            {
+                while (numbers[i] < pivot)
+                {
+                    i++;
+                }
+                while (numbers[j] > pivot)
+                {
+                    j--;
+                }
+
+                if(i <= j)
+                {
+                    int temp = numbers[i];
+                    numbers[i] = numbers[j];
+                    numbers[j] = temp;
+                    i++;
+                    j--;
+                }
+            }
+
+            if (leftIndex < j)
+            {
+                QuickSort(numbers, leftIndex, j);
+            }
+            if (i < rightIndex)
+            {
+                QuickSort(numbers, i, rightIndex);
+            }
+            
         }
         public static void HeapSort(List<int> numbers)
         {
