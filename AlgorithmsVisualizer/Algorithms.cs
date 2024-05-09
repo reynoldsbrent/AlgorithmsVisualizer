@@ -145,9 +145,51 @@ namespace AlgorithmsVisualizer
             }
             
         }
-        public static void HeapSort(List<int> numbers)
+        public static void HeapSort(List<int> numbers, int size)
         {
+            if (size <= 1)
+            {
+                return;
+            }
 
+            for(int i = size / 2 - 1; i >= 0; i--)
+            {
+                Heapify(numbers, size, i);
+            }
+
+            for (int i = size - 1; i > 0; i--)
+            {
+                int temp = numbers[0];
+                numbers[0] = numbers[i];
+                numbers[i] = temp;
+
+                Heapify(numbers, i, 0);
+            }
+        }
+        public static void Heapify(List<int> numbers, int size, int index)
+        {
+            int largestIndex = index;
+            int leftChild = 2 * index + 1;
+            int rightChild = 2 * index + 2;
+
+            if (leftChild < size && numbers[leftChild] > numbers[largestIndex])
+            {
+                largestIndex = leftChild;
+            }
+
+            if (rightChild < size && numbers[rightChild] > numbers[largestIndex])
+            {
+                largestIndex = rightChild;
+            }
+
+            if (largestIndex != index)
+            {
+                int temp = numbers[index];
+                numbers[index] = numbers[largestIndex];
+                numbers[largestIndex] = temp;
+
+                Heapify(numbers, size, largestIndex);
+            }
         }
         public static void RadixSort(List<int> numbers)
         {

@@ -56,7 +56,7 @@
                         Console.WriteLine("Sorted list: " + numberList);
                         break;
                     case "6":
-                        Algorithms.HeapSort(numbers);
+                        Algorithms.HeapSort(numbers, numbers.Count);
                         numberList = Algorithms.ListToString(numbers);
                         Console.WriteLine("Sorted list: " + numberList);
                         break;
